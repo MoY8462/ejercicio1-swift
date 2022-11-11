@@ -29,15 +29,22 @@ class ViewController: UIViewController {
     @IBOutlet var imgPersonaje: UIImageView!
     @IBOutlet var lbName: UILabel!
     @IBOutlet var lbSpecie: UILabel!
+    @IBOutlet var lbLocation: UILabel!
+    @IBOutlet var lbGender: UILabel!
+    @IBOutlet var lbStatus: UILabel!
+    @IBOutlet var lbOrigin: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         imgPersonaje.loadImage(URLAddress: personaje.image)
         lbName.text = personaje.name
+        lbSpecie.text = personaje.species.rawValue
+        lbLocation.text = personaje.location.name
+        lbGender.text = personaje.gender.rawValue
+        lbStatus.text = personaje.status.rawValue
+        lbOrigin.text = personaje.origin.name
     }
 
 
