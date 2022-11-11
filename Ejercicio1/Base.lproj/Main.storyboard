@@ -32,11 +32,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="LRx-H9-FEO">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" focusStyle="custom" rowHeight="82" id="LRx-H9-FEO">
+                                <rect key="frame" x="0.0" y="50" width="393" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LRx-H9-FEO" id="DLv-HE-Ssd">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="82"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -54,7 +54,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dW2-vU-TdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188.5496183206105" y="26.760563380281692"/>
+            <point key="canvasLocation" x="1185.4961832061069" y="26.760563380281692"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7Gs-KU-yR7">
@@ -63,10 +63,36 @@
                     <view key="view" contentMode="scaleToFill" id="ZEQ-ic-m3d">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7up-M5-U1Y">
+                                <rect key="frame" x="40" y="133" width="313" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="dGv-0V-GzI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSM-vE-jng">
+                                <rect key="frame" x="20" y="413" width="353" height="20"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5j4-q2-zav"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5j4-q2-zav" firstAttribute="trailing" secondItem="YSM-vE-jng" secondAttribute="trailing" constant="20" id="Ead-mW-Uu6"/>
+                            <constraint firstItem="5j4-q2-zav" firstAttribute="trailing" secondItem="7up-M5-U1Y" secondAttribute="trailing" constant="40" id="Sxw-fo-hze"/>
+                            <constraint firstItem="7up-M5-U1Y" firstAttribute="top" secondItem="5j4-q2-zav" secondAttribute="top" constant="30" id="U1L-T0-f2c"/>
+                            <constraint firstItem="YSM-vE-jng" firstAttribute="leading" secondItem="5j4-q2-zav" secondAttribute="leading" constant="20" id="XXy-zp-8gw"/>
+                            <constraint firstItem="YSM-vE-jng" firstAttribute="top" secondItem="7up-M5-U1Y" secondAttribute="bottom" constant="30" id="e5i-Tb-hMy"/>
+                            <constraint firstItem="7up-M5-U1Y" firstAttribute="leading" secondItem="5j4-q2-zav" secondAttribute="leading" constant="40" id="gtH-NE-ZBQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NgA-2a-yCb"/>
+                    <connections>
+                        <outlet property="imgPersonaje" destination="7up-M5-U1Y" id="GqR-6w-lHV"/>
+                        <outlet property="lbName" destination="YSM-vE-jng" id="chb-fD-xag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqG-gb-MNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

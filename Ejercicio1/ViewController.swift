@@ -25,11 +25,15 @@ extension UIImageView {
 
 class ViewController: UIViewController {
 
+    @IBOutlet var imgPersonaje: UIImageView!
     var personaje : Result!
-
+    @IBOutlet var lbName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        imgPersonaje.loadImage(URLAddress: personaje.image)
+        lbName.text = personaje.name
     }
 
 
