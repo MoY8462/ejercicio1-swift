@@ -13,6 +13,8 @@
 		869036E1291E02120059BAD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869036DF291E02120059BAD9 /* Main.storyboard */; };
 		869036E3291E02150059BAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869036E2291E02150059BAD9 /* Assets.xcassets */; };
 		869036E6291E02150059BAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869036E4291E02150059BAD9 /* LaunchScreen.storyboard */; };
+		869036EE291E088D0059BAD9 /* Rick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869036ED291E088D0059BAD9 /* Rick.swift */; };
+		869036F0291E08E60059BAD9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869036EF291E08E60059BAD9 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		869036E2291E02150059BAD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		869036E5291E02150059BAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		869036E7291E02150059BAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869036ED291E088D0059BAD9 /* Rick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick.swift; sourceTree = "<group>"; };
+		869036EF291E08E60059BAD9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				869036E2291E02150059BAD9 /* Assets.xcassets */,
 				869036E4291E02150059BAD9 /* LaunchScreen.storyboard */,
 				869036E7291E02150059BAD9 /* Info.plist */,
+				869036ED291E088D0059BAD9 /* Rick.swift */,
+				869036EF291E08E60059BAD9 /* TableViewController.swift */,
 			);
 			path = Ejercicio1;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			files = (
 				869036DE291E02120059BAD9 /* ViewController.swift in Sources */,
 				869036DA291E02120059BAD9 /* AppDelegate.swift in Sources */,
+				869036EE291E088D0059BAD9 /* Rick.swift in Sources */,
+				869036F0291E08E60059BAD9 /* TableViewController.swift in Sources */,
 				869036DC291E02120059BAD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
