@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Network
 
 extension UIImageView {
     func imgCell(URLAddress: String) {
@@ -28,6 +29,8 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        monitorNetwork ()
 
         if let url=URL(string: "https://rickandmortyapi.com/api/character/") {
             do {
@@ -70,7 +73,16 @@ class TableViewController: UITableViewController {
         viewController.personaje = personajes[indice.row]
     }
     
-
+    func monitorNetwork () {
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { path in
+            if path.status == .unsatisfied {
+                let alert = UIAlertController(title: "Error Internet", message: "Favor de verificar conexión a Internet.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            }
+        }
+        
+    }
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

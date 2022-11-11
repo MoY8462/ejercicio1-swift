@@ -71,8 +71,20 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSM-vE-jng">
-                                <rect key="frame" x="20" y="413" width="353" height="20"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                <rect key="frame" x="20" y="413" width="353" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Especie:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptw-18-3cB">
+                                <rect key="frame" x="30" y="478.33333333333331" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIP-z4-oza">
+                                <rect key="frame" x="103" y="478.33333333333331" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,17 +93,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5j4-q2-zav" firstAttribute="trailing" secondItem="YSM-vE-jng" secondAttribute="trailing" constant="20" id="Ead-mW-Uu6"/>
+                            <constraint firstItem="gIP-z4-oza" firstAttribute="top" secondItem="YSM-vE-jng" secondAttribute="bottom" constant="40" id="KrC-dt-8h5"/>
                             <constraint firstItem="5j4-q2-zav" firstAttribute="trailing" secondItem="7up-M5-U1Y" secondAttribute="trailing" constant="40" id="Sxw-fo-hze"/>
                             <constraint firstItem="7up-M5-U1Y" firstAttribute="top" secondItem="5j4-q2-zav" secondAttribute="top" constant="30" id="U1L-T0-f2c"/>
                             <constraint firstItem="YSM-vE-jng" firstAttribute="leading" secondItem="5j4-q2-zav" secondAttribute="leading" constant="20" id="XXy-zp-8gw"/>
                             <constraint firstItem="YSM-vE-jng" firstAttribute="top" secondItem="7up-M5-U1Y" secondAttribute="bottom" constant="30" id="e5i-Tb-hMy"/>
                             <constraint firstItem="7up-M5-U1Y" firstAttribute="leading" secondItem="5j4-q2-zav" secondAttribute="leading" constant="40" id="gtH-NE-ZBQ"/>
+                            <constraint firstItem="Ptw-18-3cB" firstAttribute="leading" secondItem="5j4-q2-zav" secondAttribute="leading" constant="30" id="hGV-lP-P9x"/>
+                            <constraint firstItem="Ptw-18-3cB" firstAttribute="top" secondItem="YSM-vE-jng" secondAttribute="bottom" constant="40" id="py0-Is-8fj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NgA-2a-yCb"/>
                     <connections>
                         <outlet property="imgPersonaje" destination="7up-M5-U1Y" id="GqR-6w-lHV"/>
                         <outlet property="lbName" destination="YSM-vE-jng" id="chb-fD-xag"/>
+                        <outlet property="lbSpecie" destination="gIP-z4-oza" id="mMU-O4-8f4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqG-gb-MNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
