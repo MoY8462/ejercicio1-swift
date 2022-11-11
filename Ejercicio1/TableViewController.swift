@@ -7,6 +7,22 @@
 
 import UIKit
 
+extension UIImageView {
+    func imgCell(URLAddress: String) {
+        guard let url = URL(string: URLAddress) else {
+            return
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            if let imageData = try? Data(contentsOf: url) {
+                if let loadedImage = UIImage(data: imageData) {
+                        self?.image = loadedImage
+                }
+            }
+        }
+    }
+}
+
 class TableViewController: UITableViewController {
     var personajes = [Result]()
 
@@ -22,7 +38,7 @@ class TableViewController: UITableViewController {
             catch {
             }
         }
-        
+        title = "Rick and Morty"
     }
 
     // MARK: - Table view data source
@@ -41,18 +57,19 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
         let personaje = personajes[indexPath.row]
         cell.textLabel?.text = personaje.name
+        cell.imageView?.imgCell(URLAddress: personaje.image)
         
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! ViewController
+        
+        let indice = tableView.indexPathForSelectedRow!
+        
+        viewController.personaje = personajes[indice.row]
     }
-    */
+    
 
     /*
     // Override to support editing the table view.
@@ -78,16 +95,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     */
 
