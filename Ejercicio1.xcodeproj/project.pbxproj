@@ -15,6 +15,7 @@
 		869036E6291E02150059BAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869036E4291E02150059BAD9 /* LaunchScreen.storyboard */; };
 		869036EE291E088D0059BAD9 /* Rick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869036ED291E088D0059BAD9 /* Rick.swift */; };
 		869036F0291E08E60059BAD9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869036EF291E08E60059BAD9 /* TableViewController.swift */; };
+		86F884E8291FF0780065FDFD /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F884E7291FF0780065FDFD /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		869036E7291E02150059BAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		869036ED291E088D0059BAD9 /* Rick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick.swift; sourceTree = "<group>"; };
 		869036EF291E08E60059BAD9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		86F884E7291FF0780065FDFD /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				869036E7291E02150059BAD9 /* Info.plist */,
 				869036ED291E088D0059BAD9 /* Rick.swift */,
 				869036EF291E08E60059BAD9 /* TableViewController.swift */,
+				86F884E7291FF0780065FDFD /* NetworkMonitor.swift */,
 			);
 			path = Ejercicio1;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				869036DE291E02120059BAD9 /* ViewController.swift in Sources */,
+				86F884E8291FF0780065FDFD /* NetworkMonitor.swift in Sources */,
 				869036DA291E02120059BAD9 /* AppDelegate.swift in Sources */,
 				869036EE291E088D0059BAD9 /* Rick.swift in Sources */,
 				869036F0291E08E60059BAD9 /* TableViewController.swift in Sources */,

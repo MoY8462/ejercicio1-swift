@@ -30,7 +30,14 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        monitorNetwork ()
+        if NetworkMonitor.shared.isConnected {
+            print("Conectado")
+            
+        }
+        else {
+            print("Sin conexión")
+            showSimpleAlert()
+        }
 
         if let url=URL(string: "https://rickandmortyapi.com/api/character/") {
             do {
@@ -73,17 +80,14 @@ class TableViewController: UITableViewController {
         viewController.personaje = personajes[indice.row]
     }
     
-    func monitorNetwork () {
-        let monitor = NWPathMonitor()
-        monitor.pathUpdateHandler = { path in
-            if path.status == .unsatisfied {
-                let alert = UIAlertController(title: "Error Internet", message: "Favor de verificar conexión a Internet.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default))
-            }
-        }
-        
-    }
-    /*
+    func showSimpleAlert() {
+            let alert = UIAlertController(title: "Error", message: "Error al obtener información. Verifica tu conexión a internet",         preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+                //Cancel Action
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
